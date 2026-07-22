@@ -1,0 +1,28 @@
+name = "clip-relay-api"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Bind D1 database. Replace database_id after: npx wrangler d1 create clip-relay
+[[d1_databases]]
+binding = "DB"
+database_name = "clip-relay"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Bind R2 bucket for image/file uploads
+[[r2_buckets]]
+binding = "FILES"
+bucket_name = "clip-relay-files"
+
+# Optional local vars for development:
+# [vars]
+# AUTH_PASSWORD = "change-me"
+# MAX_FILE_SIZE_BYTES = "10485760"
+# AUTH_MAX_AGE_SECONDS = "604800"
+# AUTH_TOKEN_MAX_AGE_SECONDS = "7776000"
+# ALLOW_QUERY_AUTH = "0"
+# CORS_ORIGIN = "http://localhost:3000"
+#
+# Production secrets:
+# npx wrangler secret put AUTH_PASSWORD
+# npx wrangler secret put CORS_ORIGIN

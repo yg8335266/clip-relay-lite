@@ -1,0 +1,19 @@
+{
+  "name": "clip-relay-worker",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create clip-relay",
+    "db:migrate:local": "wrangler d1 execute clip-relay --local --file=./sql/schema.sql",
+    "db:migrate:remote": "wrangler d1 execute clip-relay --remote --file=./sql/schema.sql",
+    "r2:create": "wrangler r2 bucket create clip-relay-files"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250224.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.114.1"
+  }
+}

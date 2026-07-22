@@ -1,0 +1,101 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+/.next-export/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+local-*
+.claude
+.z-ai-config
+dev.log
+test
+prompt
+
+server.log
+# sqlite databases and data
+/data/*.db
+/data/*.sqlite
+/data/*.sqlite3
+/data/*.db-wal
+/data/*.db-shm
+!/data/.gitkeep
+# ignore uploaded files content
+/data/uploads/**
+!/data/uploads/.gitkeep
+
+
+dist/
+
+# rust build artifacts
+/rust-server/target/
+/target/
+
+# rust local data (db, uploads)
+/rust-server/data/
+
+# Windows special device files
+nul
+NUL
+.env.local
+worker/.wrangler/
+worker/node_modules/
+_*.txt
+_extract.txt
+_pkg.json
+_auth.ts
+_sse.ts
+_sock.txt
+_next.txt
+_r1.txt
+_r2.txt
+_r3.txt
+_r4.txt
+_r5.txt
+_r6.txt
+_r7.txt
+_page.txt
+_page_sse.txt
+_dump.txt
+
+# AI assistant local files (not part of this project)
+.aionrs/
+
+/scripts/
+/data/
