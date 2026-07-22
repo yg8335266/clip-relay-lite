@@ -61,7 +61,6 @@ export default function ShareClient({ token }: { token: string }) {
 
   useEffect(() => {
     fetchMeta();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token]);
 
   const verify = async () => {
